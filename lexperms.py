@@ -29,13 +29,30 @@ for i in range(10**6-1):
 
 #sir why omg
 
+#rashi's ver (prossibly less efficient, but constructed w what python knowledge she presently has)
 b = permutations(range(10))
-count = 0 # count is 0
-for i in range(10**6-1):
-    count += 1
 eeep = list(b)
-print(eeep[count])
-print(str(eeep[count]))
+perm = (eeep[999999])   #kyle's constructive suggestion (using 999999), thx kyle!
+print(perm)
+index = 0
+num = ''
+for i in perm:
+    num += str(perm[index])
+    index += 1
+print(num)
+
+
+
+# K .Y. L.E./deactiavet how the fuck did u fuck it up
+
+
+#wow and i didn't just nvm
+
+
+
+
+
+
 
 
 # x = count
