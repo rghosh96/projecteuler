@@ -1,3 +1,6 @@
+
+
+
 # Solution to project Euler problem 54
 # Problem:
 """In the card game poker, a hand consists of five cards and are ranked, from lowest to highest, in the following way:
@@ -81,16 +84,16 @@ def winner(h1,h2):
     def straight(string):
         global values
         c = cycle(values)
-        values = []
+        value = []
         for i in range(9):
             temp = ''
             for k in range(5):
                 temp += next(c)
             for i in range(8):
                 next(c)
-            values.append(temp)
+            value.append(temp)
             next(c)
-        if ''.join(sorted(string)[:5]) in values:
+        if ''.join(sorted(string)[:5]) in value:
             return 4
         else:
             return threekind(string)
@@ -212,8 +215,10 @@ def winner(h1,h2):
     else:
         return 2
 
-count = 0
-for i in range(1000):
-    if winner(p1[i],p2[i])==1:
-        count += 1
-print(count)
+print(winner("5H5C6S7SKD", "2C3S8S8DTD"))
+
+# count = 0
+# for i in range(1000):
+#     if winner(p1[i],p2[i])==1:
+#         count += 1
+# print(count)
